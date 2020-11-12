@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href=".\smart-fonts.css" >
+    <link rel="stylesheet" href=".\font-awesome.min.css" >
+
+    <title>KNRMFS</title>
+
+    <style type="text/css">
+        @font-face { font-family: 'FontAwesome'; src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/fontawesome-webfontba72.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/fontawesome-webfontba72.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/fontawesome-webfontba72.ttf') format('truetype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/fontawesome-webfontba72.svg#FontAwesome') format('svg'); font-weight: normal; font-style: normal; }
+
+        .hide{
+            display: none;
+        }
+
+    </style>
+
+  </head>
+  <body>
+
+
+
+
+
+        <div class="smart-wrap">
+        <div class="smart-forms smart-container wrap-2">
+       <div class="form-header header-primary"><h4><i class="fa fa-pencil-square"></i>Registration Form</h4></div><!-- end .form-header section -->            
+            <form method="post" id="new_post" name="new_post"  action="" class="wpcf7-form" enctype="mu ltipart/form-data">
+                <div class="form-body">
+                    <span>
+                        <div class="spacer-b30">
+                            <div class="tagline"><span>Referral</span></div><!-- .tagline -->
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Referral Code</span>
+                                <label for="referral" class="field prepend-icon">
+                                    <input type="text" name="referral" id="referral" class="gui-input" placeholder="Referral Code">
+                                    <label for="referral" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            <div class="section colm colm6">
+                                <br>
+                                <label for="referral" class="field prepend-icon">
+                                    <span  class="button btn-primary " id="validate">Validate</span>
+                                </label>
+                            </div><!-- end section -->
+
+                        </div><!-- end .frm-row section -->                                    
+                    </span>
+
+                    <span class="validate-referral hide">
+                        <div class="spacer-b30">
+                            <div class="tagline"><span>Payment</span></div><!-- .tagline -->
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                               <img class="img-fluid mx-auto d-block" src=".\barcode.png" style="width: 140px;">
+                                <span class="mx-auto">Scan QR-Code for the payment and upload the recept.</span>
+                            </div><!-- end section -->
+
+                            <div class="section colm colm6">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <span>Upload Payment receipt</span>
+                                <label for="file1" class="field file">
+                                    <span class="button btn-primary"> Choose File </span>
+                                    <input type="file" class="gui-file" name="upload1" id="file1" onChange="document.getElementById('uploader1').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader1" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end  section UPLOAD-->
+                        </div><!-- end .frm-row section --> 
+                    </span>
+
+                    <span class="validate-referral hide">
+                        <div class="spacer-b30">
+                            <div class="tagline"><span>Registration Details</span></div><!-- .tagline -->
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>First Name</span>
+                                <label for="firstname" class="field prepend-icon">
+                                    <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First Name">
+                                    <label for="firstname" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Last Name</span>
+                                <label for="lastname" class="field prepend-icon">
+                                    <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last Name">
+                                    <label for="lastname" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Father Name</span>
+                                <label for="fathername" class="field prepend-icon">
+                                    <input type="text" name="fathername" id="fathername" class="gui-input" placeholder="Father Name">
+                                    <label for="fathername" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Mother Name</span>
+                                <label for="mothername" class="field prepend-icon">
+                                    <input type="text" name="mothername" id="mothername" class="gui-input" placeholder="Mother Name">
+                                    <label for="mothername" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Phone Number</span>
+                                <label for="Phone1" class="field prepend-icon">
+                                    <input type="text" name="Phone1" id="Phone1" class="gui-input" placeholder="Phone Number">
+                                    <label for="Phone1" class="field-icon"><i class="fa fa-mobile-phone"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Secondary Phone</span>
+                                <label for="phone2" class="field prepend-icon">
+                                    <input type="text" name="phone2" id="phone2" class="gui-input" placeholder="Secondary Phone">
+                                    <label for="phone2" class="field-icon"><i class="fa fa-phone"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+
+
+
+
+                        <div class="section">
+                            <span>Email Address</span>
+                            <label for="useremail" class="field prepend-icon">
+                                <input type="email" name="useremail" id="useremail" class="gui-input" placeholder="Email address">
+                                <label for="useremail" class="field-icon"><i class="fa fa-envelope"></i></label>  
+                            </label>
+                        </div><!-- end section -->
+                    
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Qualification</span>
+                                <label for="qualification" class="field prepend-icon">
+                                    <input type="text" name="qualification" id="qualification" class="gui-input" placeholder="Qualification">
+                                    <label for="qualification" class="field-icon"><i class="fa fa-graduation-cap"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Occupation</span>
+                                <label for="occupation" class="field prepend-icon">
+                                    <input type="text" name="occupation" id="occupation" class="gui-input" placeholder="Occupation">
+                                    <label for="occupation" class="field-icon"><i class="fa fa-briefcase"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Company Name</span>
+                                <label for="company" class="field prepend-icon">
+                                    <input type="text" name="company" id="company" class="gui-input" placeholder="Company Name">
+                                    <label for="company" class="field-icon"><i class="fa fa-building-o"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Designation</span>
+                                <label for="designation" class="field prepend-icon">
+                                    <input type="text" name="designation" id="designation" class="gui-input" placeholder="Designation">
+                                    <label for="designation" class="field-icon"><i class="fa fa-user"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Annual Income</span>
+                                <label for="income" class="field prepend-icon">
+                                    <input type="text" name="income" id="income" class="gui-input" placeholder="Annual Income">
+                                    <label for="income" class="field-icon"><i class="fa fa-money"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>No of Children</span>
+                                <label for="children" class="field prepend-icon">
+                                    <input type="text" name="children" id="children" class="gui-input" placeholder="No of Children">
+                                    <label for="children" class="field-icon"><i class="fa fa-child"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Height</span>
+                                <label for="height" class="field prepend-icon">
+                                    <input type="text" name="height" id="height" class="gui-input" placeholder="Height">
+                                    <label for="height" class="field-icon"><i class="fa fa-h-square"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                            
+                            <div class="section colm colm6">
+                                <span>Weight</span>
+                                <label for="Weight" class="field prepend-icon">
+                                    <input type="text" name="Weight" id="Weight" class="gui-input" placeholder="Weight">
+                                    <label for="Weight" class="field-icon"><i class="fa fa-krw"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+                    </span>
+
+                    <span class="validate-referral hide">
+                        <div class="spacer-b30">
+                            <div class="tagline"><span>Documents</span></div><!-- .tagline -->
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Aadhar</span>
+                                <label for="file2" class="field file">
+                                    <span class="button btn-primary"> Aadhar </span>
+                                    <input type="file" class="gui-file" name="aadhar" id="file2" onChange="document.getElementById('uploader2').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader2" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end section -->
+
+                            <div class="section colm colm6">
+                                <span>PAN</span>
+                                <label for="file3" class="field file">
+                                    <span class="button btn-primary"> PAN </span>
+                                    <input type="file" class="gui-file" name="pan" id="file3" onChange="document.getElementById('uploader3').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader3" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end  section UPLOAD-->
+                        </div><!-- end .frm-row section --> 
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Passport Photo</span>
+                                <label for="file4" class="field file">
+                                    <span class="button btn-primary"> Passport photo </span>
+                                    <input type="file" class="gui-file" name="passphoto" id="file4" onChange="document.getElementById('uploader4').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader4" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end section -->
+
+                            <div class="section colm colm6">
+                                <span>Full Size Phonto</span>
+                                <label for="file5" class="field file">
+                                    <span class="button btn-primary"> Full size photo </span>
+                                    <input type="file" class="gui-file" name="fullphoto" id="file5" onChange="document.getElementById('uploader5').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader5" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end  section UPLOAD-->
+                        </div><!-- end .frm-row section --> 
+
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Bank Passbook</span>
+                                <label for="file6" class="field file">
+                                    <span class="button btn-primary"> Bank Passbook </span>
+                                    <input type="file" class="gui-file" name="bankbook" id="file6" onChange="document.getElementById('uploader6').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader6" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end section -->
+
+                            <div class="section colm colm6">
+                                <span>Cancelled Cheques</span>
+                                <label for="file7" class="field file">
+                                    <span class="button btn-primary"> Cancelled Cheques </span>
+                                    <input type="file" class="gui-file" name="cheques" id="file7" onChange="document.getElementById('uploader7').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader7" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end  section UPLOAD-->
+                        </div><!-- end .frm-row section --> 
+
+
+
+                        <div class="frm-row">
+                            <div class="section colm colm6">
+                                <span>Bank Statement</span>
+                                <label for="file8" class="field file">
+                                    <span class="button btn-primary"> Bank Statement </span>
+                                    <input type="file" class="gui-file" name="statement" id="file8" onChange="document.getElementById('uploader8').value = this.value;">
+                                    <input type="text" class="gui-input" id="uploader8" placeholder="No file selected" readonly>
+                                </label>
+                            </div><!-- end section -->
+
+                            <div class="section colm colm6">
+                                <span>IFSC code</span>
+                                <label for="ifsc" class="field prepend-icon">
+                                    <input type="text" name="ifsc" id="ifsc" class="gui-input" placeholder="ifsc">
+                                    <label for="ifsc" class="field-icon"><i class="fa fa-university"></i></label>  
+                                </label>
+                            </div><!-- end section -->
+                        </div><!-- end .frm-row section --> 
+
+
+                    </span>
+
+
+                </div><!-- end .form-body section -->
+                <div class="form-footer validate-referral hide">
+                    <button type="submit" class="button btn-primary"> Submit Form </button>
+                    <button type="reset" class="button"> Cancel </button>
+                </div><!-- end .form-footer section -->
+            </form>
+            
+        </div><!-- end .smart-forms section -->
+    </div><!-- end .smart-wrap section -->
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#validate').click(function(){
+                var referalval = parseInt($('#referral').val());
+                // console.log(referalval);
+                // if ($.inArray(referalval, [4524, 4545, 546]) != -1) {
+                    // console.log(referalval);
+                    $('.hide').show();
+                    $('#referral').prop('disabled', true);
+                    $('#validate').hide();
+                // }
+            });
+        });
+    </script>
+  </body>
+</html>
